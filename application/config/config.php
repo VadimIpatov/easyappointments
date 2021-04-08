@@ -82,6 +82,7 @@ $config['url_suffix'] = '';
 |
 */
 
+/*
 $config['language'] = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ?
     [
         'ar' => 'arabic',
@@ -109,6 +110,9 @@ $config['language'] = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ?
         'sv' => 'swedish'
     ][substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2)]
     : Config::LANGUAGE;
+*/
+
+$config['language'] = 'russian';
 
 /*
 |--------------------------------------------------------------------------
@@ -120,6 +124,8 @@ $config['language'] = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ?
 | of these languages.
 |
 */
+
+/*
 $config['available_languages'] = [
     'arabic',
     'bulgarian',
@@ -149,6 +155,9 @@ $config['available_languages'] = [
     'spanish',
     'turkish'
 ];
+*/
+
+$config['available_languages'] = ['russian'];
 
 /*
 |--------------------------------------------------------------------------
