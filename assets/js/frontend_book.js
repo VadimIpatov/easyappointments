@@ -582,10 +582,6 @@ window.FrontendBook = window.FrontendBook || {};
                         }),
                         $('<br/>'),
                         $('<span/>', {
-                            'text': EALang.phone_number + ': ' + phoneNumber
-                        }),
-                        $('<br/>'),
-                        $('<span/>', {
                             'text': EALang.email + ': ' + email
                         }),
                         $('<br/>'),
