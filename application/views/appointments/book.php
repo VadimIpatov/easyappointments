@@ -29,7 +29,10 @@
             <!-- FRAME TOP BAR -->
 
             <div id="header">
-                <span id="company-name"><?= $company_name ?></span>
+	        <div id="header-logo" class="navbar-brand">
+    		    <img src="<?= base_url('assets/img/skollorama-logo.png') ?>" height="48">
+    		</div>
+                <!--<span id="company-name"><?= $company_name ?></span>-->
 
                 <div id="steps">
                     <div id="step-1" class="book-step active-step"
@@ -71,6 +74,7 @@
                         </form>
                     </div>
                 </div>
+<!--
                 <div class="booking-header-bar row">
                     <div class="col-12 col-md-10">
                         <small><?= lang('delete_personal_information_hint') ?></small>
@@ -80,6 +84,7 @@
                                 class="btn btn-danger btn-sm"><?= lang('delete') ?></button>
                     </div>
                 </div>
+-->
             <?php endif; ?>
 
             <?php if (isset($exceptions)): ?>
@@ -213,12 +218,11 @@
 
                         <div class="col-12 col-md-6">
                             <div id="select-time">
+                                <div id="available-hours"></div>
                                 <div class="form-group">
                                     <label for="select-timezone"><?= lang('timezone') ?></label>
                                     <?= render_timezone_dropdown('id="select-timezone" class="form-control" value="UTC"'); ?>
                                 </div>
-
-                                <div id="available-hours"></div>
                             </div>
                         </div>
                     </div>

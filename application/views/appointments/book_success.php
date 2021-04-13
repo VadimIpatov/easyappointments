@@ -31,13 +31,11 @@
                     <?= lang('appointment_details_was_sent_to_you') ?>
                 </p>
 
-                <p>
-                    <strong>
-                        <?= lang('check_spam_folder') ?>
-                    </strong>
-                </p>
+		<p>
+		    <img src="<?= base_url('assets/img/surfing-dog.gif') ?>" height="200"/>
+		</p>
 
-                <a href="<?= site_url() ?>" class="btn btn-success btn-large">
+                <a href="<?= site_url() ?>" class="btn btn-secondary btn-large">
                     <i class="fas fa-calendar-alt"></i>
                     <?= lang('go_to_booking_page') ?>
                 </a>
@@ -58,13 +56,6 @@
                         <?php endforeach ?>
                     </div>
                 <?php endif ?>
-            </div>
-
-            <div class="mt-2">
-                <small>
-                    Powered by
-                    <a href="https://easyappointments.org">Easy!Appointments</a>
-                </small>
             </div>
         </div>
     </div>

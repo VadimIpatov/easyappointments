@@ -67,15 +67,10 @@
 
         <a href="<?= site_url('user/forgot_password') ?>" class="forgot-password">
             <?= lang('forgot_your_password') ?></a>
-        |
-        <span id="select-language" class="badge badge-success">
-              <?= ucfirst(config('language')) ?>
-            </span>
 
         <div class="mt-4">
             <small>
-                Powered by
-                <a href="https://easyappointments.org">Easy!Appointments</a>
+                <a href="https://easyappointments.org" target="_blank">Easy!Appointments</a> fork by  <a href="https://github.com/VadimIpatov/easyappointments" target="_blank">Skillorama</a>
             </small>
         </div>
     </form>
