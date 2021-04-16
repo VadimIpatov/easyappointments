@@ -74,17 +74,6 @@
                         </form>
                     </div>
                 </div>
-<!--
-                <div class="booking-header-bar row">
-                    <div class="col-12 col-md-10">
-                        <small><?= lang('delete_personal_information_hint') ?></small>
-                    </div>
-                    <div class="col-12 col-md-2">
-                        <button id="delete-personal-information"
-                                class="btn btn-danger btn-sm"><?= lang('delete') ?></button>
-                    </div>
-                </div>
--->
             <?php endif; ?>
 
             <?php if (isset($exceptions)): ?>
@@ -113,6 +102,8 @@
 
                                 <select id="select-service" class="form-control">
                                     <?php
+				    $selectedService = htmlspecialchars($_GET['service']);
+
                                     // Group services by category, only if there is at least one service with a parent category.
                                     $has_category = FALSE;
                                     foreach ($available_services as $service)
@@ -162,7 +153,8 @@
                                                 echo '<optgroup label="' . $group_label . '">';
                                                 foreach ($group as $service)
                                                 {
-                                                    echo '<option value="' . $service['id'] . '">'
+                                                    echo '<option value="' . $service['id'] . '"'
+							. ($selectedService == $service['name'] ? 'selected' : '') . '>'
                                                         . $service['name'] . '</option>';
                                                 }
                                                 echo '</optgroup>';
@@ -173,7 +165,9 @@
                                     {
                                         foreach ($available_services as $service)
                                         {
-                                            echo '<option value="' . $service['id'] . '">' . $service['name'] . '</option>';
+                                            echo '<option value="' . $service['id'] . '" ' 
+					    . ($selectedService == $service['name'] ? 'selected' : '') 
+					    . '>' . $service['name'] . '</option>';
                                         }
                                     }
                                     ?>
@@ -256,21 +250,21 @@
                                     <?= lang('first_name') ?>
                                     <span class="text-danger">*</span>
                                 </label>
-                        	<input type="text" id="first-name" class="required form-control" maxlength="100" value="<?= htmlspecialchars($_GET["first_name"]) ?>"/>
+                        	<input type="text" id="first-name" class="required form-control" maxlength="100" value="<?= htmlspecialchars($_GET['first_name']) ?>"/>
                             </div>
                             <div class="form-group">
                                 <label for="last-name" class="control-label">
                                     <?= lang('last_name') ?>
                                     <span class="text-danger">*</span>
                                 </label>
-				<input type="text" id="last-name" class="required form-control" maxlength="120" value="<?= htmlspecialchars($_GET["last_name"]) ?>"/>
+				<input type="text" id="last-name" class="required form-control" maxlength="120" value="<?= htmlspecialchars($_GET['last_name']) ?>"/>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="control-label">
                                     <?= lang('email') ?>
                                     <span class="text-danger">*</span>
                                 </label>
-				<input type="text" id="email" class="required form-control" maxlength="120" value="<?= htmlspecialchars($_GET["email"]) ?>"/>
+				<input type="text" id="email" class="required form-control" maxlength="120" value="<?= htmlspecialchars($_GET['email']) ?>"/>
                             </div>
 			</div>
 		    </div>
